@@ -79,7 +79,6 @@ namespace NCI.OCPL.Api.Glossary
         /// </summary>
         [Nested(Name = "related_resources")]
         [Newtonsoft.Json.JsonProperty(ItemConverterType = typeof(RelatedResourceJsonConverter))]
-        [JsonConverter(typeof(InterfaceJsonConverter<IRelatedResource[]>))]
         public IRelatedResource[] RelatedResources  { get; set; } = new IRelatedResource[] { };
 
         /// <summary>
@@ -87,7 +86,6 @@ namespace NCI.OCPL.Api.Glossary
         /// </summary>
         [Nested(Name = "media")]
         [Newtonsoft.Json.JsonProperty(ItemConverterType = typeof(MediaJsonConverter))]
-        [JsonConverter(typeof(InterfaceJsonConverter<IMedia[]>))]
         public IMedia[] Media  { get; set; } = new IMedia[] { };
 
         /// <summary>

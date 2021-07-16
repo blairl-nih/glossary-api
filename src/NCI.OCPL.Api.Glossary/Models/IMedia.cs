@@ -5,6 +5,7 @@ namespace NCI.OCPL.Api.Glossary
     /// <summary>
     /// Notes a media item, type determined by the Type property.
     /// </summary>
+    [InterfaceJsonConverterShim(typeof(InterfaceJsonConverter<IMedia>))]
     public interface IMedia
     {
         /// <summary>

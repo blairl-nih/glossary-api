@@ -1,8 +1,6 @@
-using System;
+using System.Text.Json.Serialization;
 
 using Nest;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace NCI.OCPL.Api.Glossary
 {
@@ -15,7 +13,7 @@ namespace NCI.OCPL.Api.Glossary
         /// Type of media this class will represent.
         /// </summary>
         /// <value>Always MediaType.Image</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MediaType Type { get; set; }
 
         /// <summary>

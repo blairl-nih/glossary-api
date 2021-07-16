@@ -5,6 +5,9 @@ namespace NCI.OCPL.Api.Glossary
     /// <summary>
     /// Describes a GlossaryTerm's related resource.
     /// </summary>
+    //[System.Text.Json.Serialization.JsonConverter(typeof(InterfaceJsonConverter<IRelatedResource>))]
+    [InterfaceJsonConverterShim(typeof(InterfaceJsonConverter<IRelatedResource>))]
+
     public interface IRelatedResource
     {
         /// <summary>
