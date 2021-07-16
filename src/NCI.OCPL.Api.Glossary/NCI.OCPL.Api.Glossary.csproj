@@ -2,10 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-    </PropertyGroup>
-
-    <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PublishTrimmed>true</PublishTrimmed>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <PublishSingleFile>true</PublishSingleFile>
     </PropertyGroup>
 
     <ItemGroup>

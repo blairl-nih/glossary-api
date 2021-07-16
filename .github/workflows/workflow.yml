@@ -100,7 +100,7 @@ jobs:
           path: lcov.info
         if: matrix.operating-system != 'windows-latest'
       - name: Publish
-        run: dotnet publish -c Release -o $GITHUB_WORKSPACE/out src/NCI.OCPL.Api.Glossary/
+        run: dotnet publish --configuration Release -output $GITHUB_WORKSPACE/out --self-contained true --runtime win-x64 src/NCI.OCPL.Api.Glossary/
         shell: bash
       - name: Record metadata
         env:
